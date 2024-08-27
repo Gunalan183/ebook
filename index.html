@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <script src="https://kit.fontawesome.com/fdd1ceb8f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="indexs.css">
+</head>
+
+<body>
+    <div class="container">
+        <input type="radio" name="s" id="home" checked>
+        <input type="radio" name="s" id="blog">
+        <input type="radio" name="s" id="code">
+        <input type="radio" name="s" id="help">
+        <input type="radio" name="s" id="about">
+        <nav>
+            <div class="slider"></div>
+            <label class="home" for="home">
+                 <a href="#" style="text-decoration: none;"><i class="fas fa-home"></i>Home</a>
+            </label>
+            <label class="blog" for="blog">
+                <i class="fas fa-blog"></i> <a href="/product.html" style="text-decoration: none;">Products</a>
+            </label>
+            <label class="code" for="code">
+                <i class="fas fa-code"></i> <a href="about.html" style="text-decoration: none;">About</a>
+            </label>
+            <label class="help" for="help">
+                <i class="fas fa-envelope"></i> <a href="/signin.html" style="text-decoration: none;">Sign In</a>
+            </label>
+            <label class="about" for="about">
+                <i class="fas fa-user"></i> <a href="login.html" style="text-decoration: none;">Login</a>
+            </label>
+        </nav>
+    </div>
+    
+
+    <style>
+        .typing-container {
+            text-align: center;
+        }
+
+        .typing-text {
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: #8e44ad;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid #8e44ad;
+            animation: typing 4s steps(40, end), blink-caret .75s step-end initial;
+        }
+
+        /* Typing Effect */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #8e44ad; }
+        }
+
+        /* Responsive Text Size */
+        @media (max-width: 768px) {
+            .typing-text {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .typing-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <div class="section-1">
+        <div class="Section-1-text">
+            <center>
+                <h1>Welcome to Ebook Zone</h1>
+                <p>You can find your Ebook here</p>
+                <a href="product.html" class="btn">Explore Here <i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
+            </center>
+        </div>
+    </div>
+
+    <div class="typing-container">
+        <div class="typing-text"></div>
+    </div>
+
+    <div class="section-2" style="width:100%; height:100%;">
+        <h2>Featured Products</h2>
+        <div class="gallery">
+            <div class="image-holder">
+                <a href="/products.html">
+                    <img src="/images/html.jpeg" alt="img-1">
+                </a>
+            </div>
+            <div class="image-holder">
+                <a href="products.html">
+                    <img src="./images/css.jpeg" alt="img-2">
+                </a>
+            </div>
+            <div class="image-holder">
+                <a href="products.html">
+                    <img src="./images/javascript.jpeg" alt="img-3">
+                </a>
+            </div>
+            <div class="image-holder">
+                <a href="products.html">
+                    <img src="./images/python.jpeg" alt="img-4">
+                </a>
+            </div>
+            <div class="image-holder">
+                <a href="products.html">
+                    <img src="./images/java.jpeg" alt="img-5">
+                </a>
+            </div>
+            <div class="image-holder">
+                <a href="products.html">
+                    <img src="./images/c.jpeg" alt="img-9">
+                </a>
+            </div>
+            <div class="image-holder">
+                <a href="products.html">
+                    <img src="./images/assembly.jpeg" alt="img-6">
+                </a>
+            </div>
+            <div class="image-holder">
+                <a href="products.html">
+                    <img src="./images/ruby.jpeg" alt="img-7">
+                </a>
+            </div>
+            <div class="image-holder">
+                <a href="products.html">
+                    <img src="./images/swift.jpeg" alt="img-8">
+                </a>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="section-4">
+        <h2>Featured Brands</h2>
+        <div class="brand">
+            <img src="./images/book_logo1.png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/book_logo_6.png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/book_logo3.png" alt="">
+        </div>
+        <div class="brand">
+            <img src="./images/book_logo_4.png" alt="">
+        </div>
+        
+    </div>
+   
+    <!-- section-5 contact us  -->
+            <div class="section-5">
+        
+              <h2>Contact Us</h2>
+              <p>Leave us a message or suggestion:</p>
+
+              <div class="column">
+                    <form action="/index.html">
+                    <label for="fname">Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name">
+                  
+                    <label for="country">Place</label>
+                    <select id="country" name="country">
+                    <option value="india">Mamallapuram</option>
+                    <option value="australia">Chengalpattu</option>
+                    <option value="canada">Kalpakkam</option>
+                    <option value="usa">Marakanam</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something" style="height:170px"></textarea>
+                    <input  onclick="onSubmit()" class="submit" type="submit" value="Submit">
+                  
+                </form>
+              </div>
+            </div>
+
+
+    <script>
+        const texts = [
+            
+            "Find Your Favorite Ebooks Here",
+            "Explore a World of Knowledge"
+        ];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.querySelector('.typing-text').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000); // Wait 2 seconds before typing next text
+            } else {
+                setTimeout(type, 200);
+            }
+        }());
+    
+        function onSubmit(){
+            alert("Thank You for your Leave us a message or suggestion😊")
+        }
+
+    </script>
+</body>
+</html>
+
